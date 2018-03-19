@@ -1,0 +1,43 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+.box1 {
+    border: solid 1px #006699;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .todos input.textfield {
+    width: 480px;
+    height: 36px;
+    margin-right: 20px;
+    font-size: 1.4em;
+    vertical-align: top;
+  }
+
+
+  .todos input.checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .todos .checked {
+    text-decoration: line-through;
+  }
+
+  .todos .delete-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  .in_line {
+    display: inline-block;
+
+  }
+  .listContainer{
+    padding-left: 35%;
+    margin: auto;
+  }   
+  

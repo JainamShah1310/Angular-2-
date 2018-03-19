@@ -1,0 +1,31 @@
+<div class="todos container">
+    <h1> Simple Angular 2 ToDO List</h1>
+    <div>
+    <form (submit)="addTodo($event)">
+    <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo" placeholder="Enter To Do List " />
+      <button class="btn btn-primary btn-sm in_line text-center" type="submit" [disabled]="newTodo===''">Add Todo</button>
+      <button (click)="deleteSelectedTodos()" class="btn btn-danger btn-sm in_line text-center">Delete Selected</button>
+ 
+    </form>
+    </div>
+
+    <div [hidden]="newTodo">
+      Type in a new todo...
+    </div>
+
+    <div [hidden]="!newTodo">
+      <!-- Another two-way binding example -->
+      Typing: {{ newTodo }}
+    </div>
+    <div>
+    <ul>
+    <li *ngFor="let todo of todos; let i=index">
+      <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
+    <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}
+    <button (click)="deleteTodo(i)" class="delete-icon btn btn-danger" *ngIf ="todo.completed">X</button></span>
+      </li>
+      </ul>
+
+    </div>
+
+</div>
